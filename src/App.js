@@ -1,14 +1,12 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
+import Navigation from './routes/navigation/navigation.component';
 import Home from './routes/home/home.component';
 
-const Navigation = () => {
+const Shop = () => {
   return(
     <div>
-      <div>
-        <h1>I am the navigation bar</h1>
-      </div>
-      <Outlet />
+      <h1>I am the shop</h1>
     </div>
   );
 }
@@ -18,6 +16,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />} />
+        <Route path='shop' element={<Shop />} />
       </Route>
     </Routes>
   );
